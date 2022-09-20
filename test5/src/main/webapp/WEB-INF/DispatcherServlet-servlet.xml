@@ -4,7 +4,8 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<!-- HM 등록 -->
-	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+	<bean
+		class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
 		<property name="mappings">
 			<props>
 				<prop key="/login.do">login</prop>
@@ -24,8 +25,8 @@
 	<bean id="join" class="com.kim.biz.controller.JoinController" />
 
 	<!-- ViewResolver 등록 -->
-	<bean id="viewResolver" class="org.springframework.web.wervlet.view.IntervalResourceViewResolver">
-		<property name="prefix" value="/WEB-INF/view/"/>
-		<property name="suffix" value=".jsp"/>
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/view/" />
+		<property name="suffix" value=".jsp" />
 	</bean>
 </beans>
